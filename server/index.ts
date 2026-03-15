@@ -3,8 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import pkg from "@prisma/client";
-const { PrismaClient } = pkg;
+import { PrismaClient } from "@prisma/client";
 
 dotenv.config();
 
@@ -39,12 +38,12 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
   next();
 }
 
-app.get("/api/health", (_req, res) => {
+app.get("/api/health", (_req: any, res: any) => {
   res.json({ status: "ok" });
 });
 
 /* AUTH */
-app.post("/api/register", async (req, res) => {
+app.post("/api/register", async (req: any, res: any) => {
   try {
     const { email, password, role, companyId } = req.body;
 
@@ -85,7 +84,7 @@ app.post("/api/register", async (req, res) => {
   }
 });
 
-app.post("/api/login", async (req, res) => {
+app.post("/api/login", async (req: any, res: any) => {
   try {
     const { email, password } = req.body;
 
@@ -131,7 +130,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 /* COMPANIES */
-app.post("/api/companies", async (req, res) => {
+app.post("/api/companies", async (req: any, res: any) => {
   try {
     const { name, industry, city } = req.body;
 
@@ -154,7 +153,7 @@ app.post("/api/companies", async (req, res) => {
   }
 });
 
-app.get("/api/companies", async (_req, res) => {
+app.get("/api/companies", async (_req: any, res: any) => {
   try {
     const companies = await prisma.company.findMany({
       orderBy: { createdAt: "desc" },
@@ -166,7 +165,7 @@ app.get("/api/companies", async (_req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
-app.patch("/api/companies/:id/verify", verifyToken, requireAdmin, async (req, res) => {
+app.patch("/api/companies/:id/verify", verifyToken, requireAdmin, async (req: any, res: any) => {
   try {
     const { id } = req.params;
     const { verified } = req.body;
@@ -189,7 +188,7 @@ app.patch("/api/companies/:id/verify", verifyToken, requireAdmin, async (req, re
 });
 
 /* LISTINGS */
-app.post("/api/listings", async (req, res) => {
+app.post("/api/listings", async (req: any, res: any) => {
   try {
     const {
       companyId,
@@ -238,7 +237,7 @@ app.post("/api/listings", async (req, res) => {
   }
 });
 
-app.get("/api/listings", async (_req, res) => {
+app.get("/api/listings", async (_req: any, res: any) => {
   try {
     const listings = await prisma.listing.findMany({
       include: {
@@ -254,7 +253,7 @@ app.get("/api/listings", async (_req, res) => {
   }
 });
 
-app.patch("/api/listings/:id/verify", verifyToken, requireAdmin, async (req, res) => {
+app.patch("/api/listings/:id/verify", verifyToken, requireAdmin, async (req: any, res: any) => {
   try {
     const { id } = req.params;
     const { verified } = req.body;
@@ -278,7 +277,7 @@ app.patch("/api/listings/:id/verify", verifyToken, requireAdmin, async (req, res
 });
 
 /* DEAL REQUESTS */
-app.post("/api/requests", verifyToken, async (req, res) => {
+app.post("/api/requests", verifyToken, async (req: any, res: any) => {
   try {
     const { listingId, buyerCompanyName, location, material, unit, quantity, price } = req.body;
     const user = (req as any).user;
@@ -359,7 +358,7 @@ app.post("/api/requests", verifyToken, async (req, res) => {
   }
 });
 
-app.get("/api/requests", async (_req, res) => {
+app.get("/api/requests", async (_req: any, res: any) => {
   try {
     const requests = await prisma.dealRequest.findMany({
       include: {
@@ -377,7 +376,7 @@ app.get("/api/requests", async (_req, res) => {
 });
 
 /* IMPACT */
-app.get("/api/impact", async (_req, res) => {
+app.get("/api/impact", async (_req: any, res: any) => {
   try {
     const impact = await prisma.impact.findMany({
       orderBy: { id: "desc" },
@@ -390,7 +389,7 @@ app.get("/api/impact", async (_req, res) => {
   }
 });
 
-app.get("/api/matches", async (req, res) => {
+app.get("/api/matches", async (req: any, res: any) => {
   try {
     const type = String(req.query.type || "");
     const id = String(req.query.id || "");
@@ -421,7 +420,7 @@ app.get("/api/matches", async (req, res) => {
       });
 
       const matches = requests
-      .flatMap((request) => {
+      .flatMap((request: any) => {
         if (!request.buyer) {
           return [];
         }
@@ -488,7 +487,7 @@ app.get("/api/matches", async (req, res) => {
         };
       })
         .filter((item): item is NonNullable<typeof item> => item !== null)
-      .sort((a, b) => b.score - a.score);
+      .sort((a: any, b: any) => b.score - a.score);
 
       res.json(matches);
       return;
@@ -515,7 +514,7 @@ app.get("/api/matches", async (req, res) => {
       });
 
       const matches = listings
-        .map((listing) => {
+        .map((listing: any) => {
           let score = 0;
           const reasons: string[] = [];
 
@@ -578,9 +577,9 @@ app.get("/api/matches", async (req, res) => {
             data: listing,
           };
         })
-        .filter((item): item is NonNullable<typeof item> => item !== null)
-        .filter((item) => item.score > 0)
-        .sort((a, b) => b.score - a.score);
+        .filter((item: any): item is NonNullable<typeof item> => item !== null)
+        .filter((item: any) => item.score > 0)
+        .sort((a: any, b: any) => b.score - a.score);
 
       res.json(matches);
       return;
@@ -593,7 +592,7 @@ app.get("/api/matches", async (req, res) => {
   }
 });
 
-app.get("/api/impact/summary", async (_req, res) => {
+app.get("/api/impact/summary", async (_req: any, res: any) => {
   try {
     const listings = await prisma.listing.findMany({
       include: {
@@ -611,12 +610,12 @@ app.get("/api/impact/summary", async (_req, res) => {
 
     const activeListings = listings.length;
     const matchedOpportunities = requests.length;
-    const verifiedListings = listings.filter((listing) => listing.company?.verified).length;
-    const acceptedRequests = requests.filter((request) => request.status === "ACCEPTED").length;
+    const verifiedListings = listings.filter((listing: any) => listing.company?.verified).length;
+    const acceptedRequests = requests.filter((request: any) => request.status === "ACCEPTED").length;
 
     const tonsDiverted = requests
-      .filter((request) => request.status === "ACCEPTED")
-      .reduce((sum, request) => sum + request.quantity, 0);
+      .filter((request: any) => request.status === "ACCEPTED")
+      .reduce((sum: any, request: any) => sum + request.quantity, 0);
 
     const estimatedCO2Saved = Number((tonsDiverted * 1.8).toFixed(2));
 
