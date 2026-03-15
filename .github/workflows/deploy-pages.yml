@@ -19,14 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10.4.1
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,7 +37,6 @@ jobs:
         run: |
           if [ -z "$VITE_API_BASE_URL" ]; then
             echo "Missing repository variable VITE_API_BASE_URL."
-            echo "Set it to your Render API URL, e.g. https://rafid-n2v7.onrender.com/api"
             exit 1
           fi
 
