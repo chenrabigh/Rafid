@@ -1,0 +1,130 @@
+[
+  {
+    "id": "M001",
+    "supplyId": "L001",
+    "demandId": "R001",
+    "matchScore": 92,
+    "materialType": "Plastics (PET Flakes) → RDF",
+    "location": "Yanbu",
+    "reasons": [
+      "Material calorific value compatible (demo)",
+      "Distance within agreed radius (< 50 km)",
+      "Meets basic environmental compliance requirements (demo)",
+      "Existing logistics partner available"
+    ],
+    "potentialValue": "SAR 625,000 (demo)",
+    "estimatedCO2Avoided": "125 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M002",
+    "supplyId": "L002",
+    "demandId": "R002",
+    "matchScore": 88,
+    "materialType": "Scrap Steel → Recycled Steel",
+    "location": "Jubail",
+    "reasons": [
+      "Carbon steel grade matches specifications",
+      "Quantity exceeds minimum requirements",
+      "ISO certification available (demo)",
+      "Logistics corridor established"
+    ],
+    "potentialValue": "SAR 660,000 (demo)",
+    "estimatedCO2Avoided": "450 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M003",
+    "supplyId": "L003",
+    "demandId": "R003",
+    "matchScore": 85,
+    "materialType": "Paper & Cardboard → Paper Fiber",
+    "location": "Riyadh",
+    "reasons": [
+      "Fiber quality meets mill specifications",
+      "Consistent supply frequency",
+      "Contaminant-free certification (demo)",
+      "Existing supply chain"
+    ],
+    "potentialValue": "SAR 120,000 (demo)",
+    "estimatedCO2Avoided": "75 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M004",
+    "supplyId": "L004",
+    "demandId": "R004",
+    "matchScore": 90,
+    "materialType": "Aluminum Scrap → Recycled Aluminum",
+    "location": "Dammam",
+    "reasons": [
+      "Aluminum alloy 6061 suitable for casting",
+      "Purity exceeds foundry requirements",
+      "Monthly frequency aligns with demand",
+      "Quality verification partner available"
+    ],
+    "potentialValue": "SAR 360,000 (demo)",
+    "estimatedCO2Avoided": "640 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M005",
+    "supplyId": "L005",
+    "demandId": "R005",
+    "matchScore": 94,
+    "materialType": "Waste Heat Stream → Thermal Energy",
+    "location": "Yanbu",
+    "reasons": [
+      "Temperature range perfectly matches requirements",
+      "Continuous availability confirmed",
+      "Direct integration possible (demo)",
+      "Industrial safety standards met"
+    ],
+    "potentialValue": "SAR 4,500,000 (demo)",
+    "estimatedCO2Avoided": "2,800 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M006",
+    "supplyId": "L006",
+    "demandId": "R006",
+    "matchScore": 87,
+    "materialType": "Agricultural Residue → Biomass",
+    "location": "Al-Kharj",
+    "reasons": [
+      "Calorific value within acceptable range",
+      "Seasonal supply matches demand pattern",
+      "Moisture content suitable for combustion",
+      "Agricultural waste certification available"
+    ],
+    "potentialValue": "SAR 450,000 (demo)",
+    "estimatedCO2Avoided": "1,200 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M007",
+    "supplyId": "L007",
+    "demandId": "R007",
+    "matchScore": 89,
+    "materialType": "Treated Wastewater → Industrial Water",
+    "location": "Jeddah",
+    "reasons": [
+      "Water quality parameters exceed standards",
+      "Weekly supply frequency matches demand",
+      "Desalination compatibility confirmed (demo)",
+      "Environmental compliance verified"
+    ],
+    "potentialValue": "SAR 1,200 (demo)",
+    "estimatedCO2Avoided": "150 tonnes CO2e (illustrative)"
+  },
+  {
+    "id": "M008",
+    "supplyId": "L008",
+    "demandId": "R008",
+    "matchScore": 91,
+    "materialType": "Mixed Plastics → Plastic Pellets",
+    "location": "Khobar",
+    "reasons": [
+      "HDPE content meets virgin quality equivalent",
+      "Melt flow index within specifications",
+      "Density matches molding requirements",
+      "Monthly supply cycle aligns with production"
+    ],
+    "potentialValue": "SAR 440,000 (demo)",
+    "estimatedCO2Avoided": "320 tonnes CO2e (illustrative)"
+  }
+]

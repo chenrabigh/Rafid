@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  role      Role
+  companyId String?
+  company   Company? @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Company {
+  id        String   @id @default(uuid())
+  name      String
+  industry  String
+  city      String
+  verified  Boolean  @default(false)
+
+  users     User[]
+  listings  Listing[]
+  requests  DealRequest[]
+
+  createdAt DateTime @default(now())
+}
+
+model Listing {
+  id          String   @id @default(uuid())
+  companyId   String?
+  companyName String
+  material    String
+  grade       String?
+  purity      String?
+  quantity    Float
+  unit        String
+  frequency   String?
+  description String
+  compliance  String?
+  location    String
+  verified    Boolean  @default(false)
+
+  company     Company? @relation(fields: [companyId], references: [id])
+  requests    DealRequest[]
+
+  createdAt   DateTime @default(now())
+}
+
+model DealRequest {
+  id               String        @id @default(uuid())
+  listingId        String?
+  buyerId          String
+  buyerCompanyName String
+  material         String?
+  unit             String?
+  quantity         Float
+  price            Float
+  status           RequestStatus @default(PENDING)
+
+  listing Listing? @relation(fields: [listingId], references: [id])
+  buyer   Company  @relation(fields: [buyerId], references: [id])
+
+  createdAt  DateTime      @default(now())
+}
+
+model Impact {
+  id        String  @id @default(uuid())
+  dealId    String
+  tonsSaved Float
+  co2Saved  Float
+}
+
+enum Role {
+  SUPPLIER
+  BUYER
+  ADMIN
+}
+
+enum RequestStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}

@@ -1,0 +1,90 @@
+{
+  "kpis": {
+    "totalWasteDiverted": {
+      "value": 12450,
+      "unit": "tonnes",
+      "label": "Total Waste Diverted",
+      "change": "+18% from last quarter",
+      "note": "Illustrative demo data"
+    },
+    "estimatedCO2Avoided": {
+      "value": 6225,
+      "unit": "tonnes CO2e",
+      "label": "Estimated CO2 Avoided",
+      "change": "+22% from last quarter",
+      "note": "Illustrated estimate based on demo scenarios"
+    },
+    "economicValueEnabled": {
+      "value": 8750000,
+      "unit": "SAR",
+      "label": "Economic Value Enabled",
+      "change": "+25% from last quarter",
+      "note": "Demo value - illustrative"
+    },
+    "activeCircularPartnerships": {
+      "value": 48,
+      "unit": "partnerships",
+      "label": "Active Circular Partnerships",
+      "change": "+12 new this quarter",
+      "note": "Demo count"
+    }
+  },
+  "charts": {
+    "wasteByMaterial": [
+      { "material": "Plastics", "diverted": 2800, "percentage": 22.5 },
+      { "material": "Metals", "diverted": 3200, "percentage": 25.7 },
+      { "material": "Paper", "diverted": 1950, "percentage": 15.6 },
+      { "material": "Biomass", "diverted": 2100, "percentage": 16.9 },
+      { "material": "Water", "diverted": 1200, "percentage": 9.6 },
+      { "material": "Other", "diverted": 1200, "percentage": 9.7 }
+    ],
+    "dealsPerQuarter": [
+      { "quarter": "Q1 2025", "deals": 8, "value": 1200000 },
+      { "quarter": "Q2 2025", "deals": 12, "value": 1800000 },
+      { "quarter": "Q3 2025", "deals": 18, "value": 2750000 },
+      { "quarter": "Q4 2025", "deals": 24, "value": 3750000 }
+    ]
+  },
+  "recentTransactions": [
+    {
+      "id": "TX001",
+      "supplier": "Aramco Industrial",
+      "buyer": "Yanbu Cement",
+      "material": "Waste Heat Stream",
+      "quantity": "45 MW",
+      "value": "SAR 4,500,000 (demo)",
+      "date": "2026-02-25",
+      "status": "Completed"
+    },
+    {
+      "id": "TX002",
+      "supplier": "Gulf Steel Works",
+      "buyer": "Gulf Steel Mills",
+      "material": "Scrap Steel",
+      "quantity": "300 tonnes",
+      "value": "SAR 660,000 (demo)",
+      "date": "2026-02-24",
+      "status": "In Transit"
+    },
+    {
+      "id": "TX003",
+      "supplier": "Packaging Solutions Ltd",
+      "buyer": "Saudi Paper Mills",
+      "material": "Paper & Cardboard",
+      "quantity": "100 tonnes",
+      "value": "SAR 120,000 (demo)",
+      "date": "2026-02-23",
+      "status": "Completed"
+    },
+    {
+      "id": "TX004",
+      "supplier": "Metal Recyclers Inc",
+      "buyer": "Aluminum Foundry Co",
+      "material": "Aluminum Scrap",
+      "quantity": "50 tonnes",
+      "value": "SAR 360,000 (demo)",
+      "date": "2026-02-22",
+      "status": "Completed"
+    }
+  ]
+}

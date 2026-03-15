@@ -1,0 +1,138 @@
+[
+  {
+    "id": "L001",
+    "materialType": "Plastics (PET Flakes)",
+    "quantity": 250,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Yanbu",
+    "region": "Western",
+    "specs": [
+      "PET Grade A",
+      "Moisture content < 2%",
+      "Color: Clear/Transparent"
+    ],
+    "compliance": "Meets local environmental permit requirements (demo)",
+    "companyName": "Aramco Industrial",
+    "postedDate": "2026-02-15"
+  },
+  {
+    "id": "L002",
+    "materialType": "Scrap Steel",
+    "quantity": 500,
+    "unit": "tonnes",
+    "frequency": "Weekly",
+    "location": "Jubail",
+    "region": "Eastern",
+    "specs": [
+      "Carbon steel, grade A",
+      "Particle size: 10-50mm",
+      "Iron content > 98%"
+    ],
+    "compliance": "Certified under ISO 9001 (demo)",
+    "companyName": "Gulf Steel Works",
+    "postedDate": "2026-02-18"
+  },
+  {
+    "id": "L003",
+    "materialType": "Paper & Cardboard",
+    "quantity": 150,
+    "unit": "tonnes",
+    "frequency": "Bi-weekly",
+    "location": "Riyadh",
+    "region": "Central",
+    "specs": [
+      "Mixed grades",
+      "Moisture < 12%",
+      "Contaminant-free"
+    ],
+    "compliance": "Meets recycling standards (demo)",
+    "companyName": "Packaging Solutions Ltd",
+    "postedDate": "2026-02-20"
+  },
+  {
+    "id": "L004",
+    "materialType": "Aluminum Scrap",
+    "quantity": 80,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Dammam",
+    "region": "Eastern",
+    "specs": [
+      "Aluminum alloy 6061",
+      "Purity > 95%",
+      "Size: 5-30cm"
+    ],
+    "compliance": "Environmental compliance verified (demo)",
+    "companyName": "Metal Recyclers Inc",
+    "postedDate": "2026-02-22"
+  },
+  {
+    "id": "L005",
+    "materialType": "Waste Heat Stream",
+    "quantity": 45,
+    "unit": "MW thermal",
+    "frequency": "Continuous",
+    "location": "Yanbu",
+    "region": "Western",
+    "specs": [
+      "Temperature range: 150-200°C",
+      "Continuous availability",
+      "Industrial grade"
+    ],
+    "compliance": "Meets industrial safety standards (demo)",
+    "companyName": "Aramco Industrial",
+    "postedDate": "2026-02-19"
+  },
+  {
+    "id": "L006",
+    "materialType": "Agricultural Residue",
+    "quantity": 300,
+    "unit": "tonnes",
+    "frequency": "Seasonal",
+    "location": "Al-Kharj",
+    "region": "Central",
+    "specs": [
+      "Wheat straw",
+      "Moisture: 12-15%",
+      "Calorific value: 14-16 MJ/kg"
+    ],
+    "compliance": "Agricultural waste certification (demo)",
+    "companyName": "Agri-Waste Management",
+    "postedDate": "2026-02-17"
+  },
+  {
+    "id": "L007",
+    "materialType": "Treated Wastewater",
+    "quantity": 200,
+    "unit": "m³",
+    "frequency": "Weekly",
+    "location": "Jeddah",
+    "region": "Western",
+    "specs": [
+      "pH: 6.5-7.5",
+      "TDS < 500 ppm",
+      "Turbidity < 2 NTU"
+    ],
+    "compliance": "Meets water quality standards (demo)",
+    "companyName": "Water Treatment Corp",
+    "postedDate": "2026-02-21"
+  },
+  {
+    "id": "L008",
+    "materialType": "Mixed Plastics",
+    "quantity": 120,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Khobar",
+    "region": "Eastern",
+    "specs": [
+      "HDPE & LDPE mix",
+      "Sorted by color",
+      "Density: 0.92-0.96 g/cm³"
+    ],
+    "compliance": "Plastic waste recycling certified (demo)",
+    "companyName": "Polymer Recycling Ltd",
+    "postedDate": "2026-02-23"
+  }
+]

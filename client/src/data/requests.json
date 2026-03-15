@@ -1,0 +1,146 @@
+[
+  {
+    "id": "R001",
+    "materialType": "RDF (Refuse Derived Fuel)",
+    "quantity": 200,
+    "unit": "tonnes",
+    "frequency": "Weekly",
+    "location": "Yanbu",
+    "region": "Western",
+    "specs": [
+      "Calorific value: 15-18 MJ/kg",
+      "Moisture < 15%",
+      "Ash content < 10%"
+    ],
+    "compliance": "Meets fuel quality standards (demo)",
+    "companyName": "Yanbu Cement Company",
+    "postedDate": "2026-02-16",
+    "budget": "SAR 2,500-3,500 per tonne (demo)"
+  },
+  {
+    "id": "R002",
+    "materialType": "Scrap Steel",
+    "quantity": 300,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Jubail",
+    "region": "Eastern",
+    "specs": [
+      "Carbon steel preferred",
+      "Size: 10-100mm",
+      "Iron content > 97%"
+    ],
+    "compliance": "ISO certified suppliers preferred (demo)",
+    "companyName": "Gulf Steel Mills",
+    "postedDate": "2026-02-17",
+    "budget": "SAR 1,800-2,200 per tonne (demo)"
+  },
+  {
+    "id": "R003",
+    "materialType": "Recycled Paper Fiber",
+    "quantity": 100,
+    "unit": "tonnes",
+    "frequency": "Bi-weekly",
+    "location": "Riyadh",
+    "region": "Central",
+    "specs": [
+      "Fiber length: 3-5mm",
+      "Brightness: > 60%",
+      "Contaminant-free"
+    ],
+    "compliance": "Paper recycling standards (demo)",
+    "companyName": "Saudi Paper Mills",
+    "postedDate": "2026-02-18",
+    "budget": "SAR 800-1,200 per tonne (demo)"
+  },
+  {
+    "id": "R004",
+    "materialType": "Recycled Aluminum",
+    "quantity": 50,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Dammam",
+    "region": "Eastern",
+    "specs": [
+      "Aluminum alloy suitable for casting",
+      "Purity > 94%",
+      "Size: 5-25cm"
+    ],
+    "compliance": "Aluminum recycling certified (demo)",
+    "companyName": "Aluminum Foundry Co",
+    "postedDate": "2026-02-19",
+    "budget": "SAR 3,500-4,500 per tonne (demo)"
+  },
+  {
+    "id": "R005",
+    "materialType": "Thermal Energy",
+    "quantity": 30,
+    "unit": "MW thermal",
+    "frequency": "Continuous",
+    "location": "Yanbu",
+    "region": "Western",
+    "specs": [
+      "Temperature: 140-180°C",
+      "Continuous supply needed",
+      "Industrial grade"
+    ],
+    "compliance": "Industrial safety certified (demo)",
+    "companyName": "Yanbu Cement Company",
+    "postedDate": "2026-02-20",
+    "budget": "SAR 150-250 per MWh (demo)"
+  },
+  {
+    "id": "R006",
+    "materialType": "Biomass/Agricultural Waste",
+    "quantity": 250,
+    "unit": "tonnes",
+    "frequency": "Seasonal",
+    "location": "Al-Kharj",
+    "region": "Central",
+    "specs": [
+      "Wheat/rice straw",
+      "Moisture: 10-14%",
+      "Calorific value: 14-17 MJ/kg"
+    ],
+    "compliance": "Agricultural waste standards (demo)",
+    "companyName": "Energy Generation Ltd",
+    "postedDate": "2026-02-21",
+    "budget": "SAR 1,200-1,800 per tonne (demo)"
+  },
+  {
+    "id": "R007",
+    "materialType": "Treated Industrial Water",
+    "quantity": 150,
+    "unit": "m³",
+    "frequency": "Weekly",
+    "location": "Jeddah",
+    "region": "Western",
+    "specs": [
+      "pH: 6.8-7.2",
+      "TDS < 400 ppm",
+      "Turbidity < 1 NTU"
+    ],
+    "compliance": "Water quality standards (demo)",
+    "companyName": "Desalination Plant",
+    "postedDate": "2026-02-22",
+    "budget": "SAR 5-8 per m³ (demo)"
+  },
+  {
+    "id": "R008",
+    "materialType": "Plastic Pellets (HDPE)",
+    "quantity": 80,
+    "unit": "tonnes",
+    "frequency": "Monthly",
+    "location": "Khobar",
+    "region": "Eastern",
+    "specs": [
+      "Virgin quality equivalent",
+      "Melt flow index: 0.5-1.0",
+      "Density: 0.952-0.965 g/cm³"
+    ],
+    "compliance": "Plastic recycling standards (demo)",
+    "companyName": "Plastic Injection Molding",
+    "postedDate": "2026-02-23",
+    "budget": "SAR 4,000-5,500 per tonne (demo)"
+  }
+]
