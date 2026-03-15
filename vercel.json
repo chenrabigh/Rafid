@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 {
   "version": 3,
-  "builds": [
-    { "src": "client/package.json", "use": "@vercel/static-build" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
 }
-=======
-{
-  "version": 3,
-  "builds": [
-    { "src": "client/package.json", "use": "@vercel/static-build" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
-}
->>>>>>> 633ca40 (Initial commit with patch file for Railway deployment)
